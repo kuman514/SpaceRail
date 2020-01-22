@@ -18,7 +18,7 @@ public class ObstacleBehaviour : MonoBehaviour
         transform.position -= new Vector3(0f, 0f, speed);
         if(transform.position.z < -18f)
         {
-            transform.position = new Vector3(transform.position.x, transform.position.y, 20f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, 25f);
         }
     }
 }
