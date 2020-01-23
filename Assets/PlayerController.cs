@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if(Lives <= 0)
+        {
+            // gameover
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
