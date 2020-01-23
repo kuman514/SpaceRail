@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     Rigidbody rb;
     bool isOnTheGround;
-    public static int Lives = 3;
+    public static int Lives = 6;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Obstacle"))
         {
             // Crushed Obstacle
+            print("Crushed Obstacle");
             Lives--;
         }
     }

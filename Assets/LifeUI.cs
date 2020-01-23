@@ -16,6 +16,6 @@ public class LifeUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textObj.text = "Lives " + PlayerController.Lives;
+        textObj.text = "Lives " + PlayerController.Lives / 2;
     }
 }
