@@ -25,9 +25,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Rail"))
+        if (collision.gameObject.CompareTag("Rail"))
         {
+            // Landing
             isOnTheGround = true;
+        }
+
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            // Crushed Obstacle
         }
     }
 
