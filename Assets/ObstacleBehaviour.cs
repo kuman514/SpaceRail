@@ -9,8 +9,7 @@ public class ObstacleBehaviour : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        speed = 0.02f;
-        ResetPosition();
+        ResetObstacle();
     }
 
     // Update is called once per frame
@@ -30,5 +29,11 @@ public class ObstacleBehaviour : MonoBehaviour
     void ResetPosition()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, 25f + Random.Range(0.5f, 12f));
+    }
+
+    public void ResetObstacle()
+    {
+        speed = 0.02f;
+        ResetPosition();
     }
 }

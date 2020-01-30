@@ -21,4 +21,9 @@ public class ScoreUI : MonoBehaviour
         score += 1;
         textObj.text = "Score " + score;
     }
+
+    public void ResetScore()
+    {
+        score = 0;
+    }
 }

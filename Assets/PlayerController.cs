@@ -7,12 +7,14 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     bool isOnTheGround;
     public static int Lives = 6;
+    int life;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         isOnTheGround = true;
+        life = Lives;
     }
 
     // Update is called once per frame
@@ -21,11 +23,6 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
-        }
-
-        if(Lives <= 0)
-        {
-            // gameover
         }
     }
 
@@ -52,5 +49,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(0f, 200f, 0f);
             isOnTheGround = false;
         }
+    }
+
+    public void ResetLives()
+    {
+        Lives = life;
     }
 }
