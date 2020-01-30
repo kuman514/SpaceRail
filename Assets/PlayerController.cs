@@ -38,7 +38,11 @@ public class PlayerController : MonoBehaviour
         {
             // Crushed Obstacle
             print("Crushed Obstacle");
-            Lives--;
+
+            if(Lives > 0)
+            {
+                Lives--;
+            }
         }
     }
 

@@ -18,7 +18,11 @@ public class ScoreUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += 1;
+        if(PlayerController.Lives > 0)
+        {
+            score += 1;
+        }
+
         textObj.text = "Score " + score;
     }
 
