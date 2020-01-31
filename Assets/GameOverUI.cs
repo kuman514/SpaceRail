@@ -28,5 +28,10 @@ public class GameOverUI : MonoBehaviour
             isGameOver = true;
             Target.SetActive(true);
         }
+
+        if (PlayerController.Lives > 0)
+        {
+            isGameOver = false;
+        }
     }
 }
