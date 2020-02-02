@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     bool isOnTheGround;
     public static int Lives = 6;
     int life;
+    AudioSource se;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         isOnTheGround = true;
         life = Lives;
+        se = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,6 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         if(isOnTheGround)
         {
+            se.Play();
             rb.AddForce(0f, 200f, 0f);
             isOnTheGround = false;
         }
