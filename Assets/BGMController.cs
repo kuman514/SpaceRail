@@ -10,8 +10,8 @@ public class BGMController : MonoBehaviour
     void Start()
     {
         bgm = GetComponent<AudioSource>();
-        bgm.playOnAwake = true;
-        bgm.Play();
+        //bgm.playOnAwake = true;
+        //bgm.Play();
     }
 
     // Update is called once per frame
